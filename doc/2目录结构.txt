@@ -1,0 +1,19 @@
+目录结构说明
+    common：公共处理业务
+        common.conf: 配置文件参数读取
+        common.config:配置类
+        common.constant:常量参数
+        common.enums:枚举类
+        common.exceptions:系统异常定义
+        common.handler:AOP全局处理
+    controller:接口管理
+    dao.db:数据库Mapper
+    manager:业务处理
+        manager.converter:业务数据转换
+        manager.validator:业务校验
+    model:schema定义
+        model.db:数据库entity
+        model.web:业务交互实体类
+    rpc.client:远程连接客户端
+    service:数据存储层处理
+    utils:工具类

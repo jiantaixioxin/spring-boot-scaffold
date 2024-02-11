@@ -1,0 +1,48 @@
+server:
+  port: 6601
+  tomcat:
+    uri-encoding: utf-8
+    #最小保持线程数
+    min-spare-threads: 10
+    #最大线程数
+    max-threads: 200
+    #最大线连接数
+    max-connections: 200
+    #等待认为队列数
+    accept-count: 1000
+    #连接超时时间
+    connection-timeout: 5000
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/scaffold?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: mysql
+    password: mysql
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    # 设置密码
+    #password: "123456"
+    # 连接超时时间
+    timeout: 1800000
+    # 使用的数据库索引，默认是0
+    database: 0
+    lettuce:
+      pool:
+        # 最大阻塞等待时间，负数表示没有限制
+        max-wait: -1
+        # 连接池中的最大空闲连接
+        max-idle: 5
+        # 连接池中的最小空闲连接
+        min-idle: 0
+        # 连接池中最大连接数，负数表示没有限制
+        max-active: 20
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+config:
+  hello: hello spring boot scaffold it!

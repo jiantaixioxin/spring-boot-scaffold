@@ -1,0 +1,29 @@
+server:
+  port: 6601
+  tomcat:
+    uri-encoding: utf-8
+    #最小保持线程数
+    min-spare-threads: 10
+    #最大线程数
+    max-threads: 200
+    #最大线连接数
+    max-connections: 200
+    #等待认为队列数
+    accept-count: 1000
+    #连接超时时间
+    connection-timeout: 5000
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/scaffold?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: mysql
+    password: mysql
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+config:
+  hello: hello spring boot scaffold st!
