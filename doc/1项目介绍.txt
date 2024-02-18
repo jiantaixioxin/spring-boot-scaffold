@@ -13,4 +13,4 @@ mybatis文件生成：mybatis-generator
 mysql/mysql
 root/root
 
--Dlog4j.skipJansi=false -Dspring.profiles.active=it
+启动参数：-Dlog4j.skipJansi=false -Dspring.profiles.active=it
